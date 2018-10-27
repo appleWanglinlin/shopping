@@ -1,0 +1,22 @@
+.mui-bar-tab ~ .mui-content {
+  padding-top: 0;
+}
+.mui-content {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 50px;
+}
+.mui-content .mui-row {
+  height: 35px;
+  line-height: 35px;
+  background-color: #efeff4;
+  text-align: center;
+  margin: 10px 13px 0;
+}
+.mui-content .mui-row .mui-col-xs-6 {
+  font-size: 14px;
+}
+.mui-content .mui-row .mui-col-xs-6 i {
+  font-size: 16px;
+}
