@@ -1,6 +1,9 @@
 .my-header {
   background-color: #c35367;
 }
+.my-header .mui-icon {
+  color: #fff;
+}
 .my-header h1 {
   color: #fff;
 }

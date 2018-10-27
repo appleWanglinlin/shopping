@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="./css/common.css"/>
+    <script src="assets/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./css/search.css"/>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
+    <script src="js/search.js"></script>
+    <script src="./js/public.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav my-header">
+    <h1 class="mui-title">乐淘云购</h1>
+</header>
+<nav class="mui-bar mui-bar-tab my-footer">
+    <a class="mui-tab-item mui-active" href="index.html">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="category.html">
+        <span class="mui-icon mui-icon-bars"></span>
+        <span class="mui-tab-label">分类</span>
+    </a>
+    <a class="mui-tab-item" href="cart.html">
+        <span class="mui-icon fa fa-shopping-cart"></span>
+        <span class="mui-tab-label">购物车</span>
+    </a>
+    <a class="mui-tab-item" href="user.html">
+        <span class="mui-icon mui-icon-person"></span>
+        <span class="mui-tab-label">会员中心</span>
+    </a>
+</nav>
+<div class="mui-content">
+    <div class="container">
+        <!--//搜索框-->
+        <div class="search">
+            <input type="text" name="" id="" placeholder="请输入搜索关键字..."/>
+            <input type="button" value="搜索" id="search-btn"/>
+        </div>
+        <!--//搜索历史-->
+        <div class="history mui-clearfix">
+            <span class="search-history">搜索历史</span>
+            <div class="clear-history">
+                <i class="mui-icon mui-icon-trash"></i>
+                <span>清空历史</span>
+            </div>
+        </div>
+        <ul class="mui-table-view">
+            <!--<li class="mui-table-view-cell">Item 1</li>-->
+        </ul>
+    </div>
+    <script type="text/template" id="search-history">
+      <% for(var i=0;i<keyArr.length;i++) {%>
+             <li class="mui-table-view-cell"><%=keyArr[i]%></li>
+      <% }%>
+    </script>
+</div>
+</body>
+</html>

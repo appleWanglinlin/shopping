@@ -8,6 +8,9 @@ ul {
 body {
     background-color: #fff;
 }
+.mui-content {
+    background-color: #fff;
+}
 @font-face {
     font-family: 'FontAwesome';
     src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');

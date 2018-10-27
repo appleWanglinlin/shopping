@@ -1,0 +1,33 @@
+@baseColor:#C35367;
+.mui-content {
+  .mui-input-group {
+    .mui-input-row {
+      position: relative;
+      .code{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        color: @baseColor;
+        font-size: 14px;
+      }
+    }
+    .mui-button-row {
+      padding: 5px 10px;
+      .mui-btn-primary {
+        width: 100%;
+        background-color: @baseColor;
+        border: 1px solid @baseColor;
+      }
+    }
+  }
+  .login-now,
+  .register-now{
+    margin-top: 10px;
+    color: @baseColor;
+    font-size: 14px;
+    display: block;
+    margin-right: 10px;
+    text-align: right;
+  }
+}

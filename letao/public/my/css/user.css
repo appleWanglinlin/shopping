@@ -1,0 +1,9 @@
+.mui-content .mui-table-view::before {
+  height: 0;
+}
+.mui-content .mui-table-view .mui-table-view-cell {
+  font-size: 14px;
+}
+.mui-content .mui-table-view .mui-table-view-cell .exit-login {
+  text-align: center;
+}
