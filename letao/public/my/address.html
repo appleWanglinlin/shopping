@@ -11,13 +11,13 @@
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="./assets/artTemplate/template-native.js"></script>
     <script src="./assets/zepto/zepto.min.js"></script>
-    <!--<script src="./js/public.js"></script>-->
+    <script src="./js/public.js"></script>
     <script src="./js/address.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
+    <a class="mui-icon mui-icon-back" href="user.html"></a>
     <h1 class="mui-title">收货地址列表</h1>
-    <a class="mui-icon mui-icon-search mui-pull-right"></a>
 </header>
 <nav class="mui-bar mui-bar-tab my-footer">
     <a class="mui-tab-item mui-active" href="index.html">
@@ -47,8 +47,8 @@
     <% for(var i=0;i<data.length;i++) {%>
     <li class="mui-table-view-cell mui-media mui-selected mui-transitioning" id="li">
         <div class="mui-slider-right mui-disabled mui-selected">
-            <a class="mui-btn mui-btn-yellow" id="editBtn" data-id="<%=data[i].id%>">编辑</a>
-            <a class="mui-btn mui-btn-red" id="delBtn" data-id="<%=data[i].id%>">删除</a>
+            <a href="#" class="mui-btn mui-btn-yellow" id="editBtn" data-id="<%=data[i].id%>">编辑</a>
+            <a href="#" class="mui-btn mui-btn-red" id="delBtn" data-id="<%=data[i].id%>">删除</a>
         </div>
         <div class="mui-media-body mui-slider-handle">
             邮编:<%=data[i].postCode%> 收货人：<%=data[i].recipients%>
