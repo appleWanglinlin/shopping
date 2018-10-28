@@ -2,27 +2,34 @@
  * Created by username on 2018/10/27.
  */
 $(function(){
-    //ÏÔÊ¾·ÖÀàÊı¾İ
-    $.ajax({
-        url:"/category/queryTopCategoryPaging",
-        type:"get",
-        data:{
-            page:1,
-            pageSize:10
-        },
-        success:function(res) {
-            //console.log(res);
-            var html = template("categoryFirstTpl",res);
-            //console.log(html);
-            $('#showCategoryFirst').html(html);
-        }
-    });
-
-    //Ìí¼Ó·ÖÀàÊı¾İ
+    var page = 1;
+    var pageSize = 10;
+    var total = 0;
+    function getData(){
+        //æ˜¾ç¤ºåˆ†ç±»æ•°æ®
+        $.ajax({
+            url:"/category/queryTopCategoryPaging",
+            type:"get",
+            data:{
+                page:page,
+                pageSize:pageSize
+            },
+            success:function(res) {
+                //console.log(res);
+                var html = template("categoryFirstTpl",res);
+                //console.log(html);
+                total = Math.ceil(res.total/pageSize);
+                //console.log(total);
+                $('#showCategoryFirst').html(html);
+            }
+        });
+    }
+    getData();
+    //æ·»åŠ åˆ†ç±»æ•°æ®
     $('#saveBtn').on('click',function(){
         var categoryName = $('#categoryName').val().trim();
         if(!categoryName) {
-            alert("ÇëÊäÈë·ÖÀàÃû³Æ");
+            alert("è¯·è¾“å…¥åˆ†ç±»åç§°");
             return;
         }
         $.ajax({
@@ -41,4 +48,25 @@ $(function(){
         });
     });
 
+    //ä¸Šä¸€é¡µ
+    $("#prev").on('click',function(){
+        page--;
+        if(page < 1) {
+            page = total;
+            //console.log(page);
+            alert('å·²ç»æ˜¯ç¬¬ä¸€é¡µäº†');
+        }
+        getData();
+    });
+
+    //ä¸‹ä¸€é¡µ
+    $("#next").on('click',function(){
+        page++;
+        if(page > total) {
+            page = total;
+            //console.log(page);
+            alert('å·²ç»æ˜¯æœ€åä¸€é¡µäº†');
+        }
+        getData();
+    });
 });
